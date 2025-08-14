@@ -7,56 +7,12 @@
 <link rel="icon" href="favetest.webp" type="image/webp">
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-/* Reset and basic */
-body, html { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-.header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff; transition: background-color 0.3s, backdrop-filter 0.3s; padding: 10px 0; }
-.container { width: 90%; max-width: 1200px; margin: auto; }
-.nav ul { display: flex; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
-.nav li { margin-right: 20px; }
-.nav a { text-decoration: none; color: #000; }
-.hero { padding-top: 120px; }
-.hero h2 { font-size: 2rem; margin-bottom: 10px; }
-.hero p { font-size: 1rem; }
-.button-group { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
-.option-btn { padding: 8px 12px; border: 1px solid #000; cursor: pointer; background: #fff; border-radius: 5px; }
-.option-btn.active { background-color: #000; color: #fff; }
-
-/* Hamburger styles */
-.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-.hamburger div { width: 25px; height: 3px; background-color: #000; transition: 0.3s; }
-
-/* Mobile adjustments */
-@media screen and (max-width: 768px) {
-    .nav ul { display: none; flex-direction: column; gap: 10px; background-color: #fff; position: absolute; top: 100%; left: 0; width: 100%; padding: 10px 0; }
-    .nav ul.active { display: flex; }
-    .hamburger { display: flex; }
-    .hero h2 { font-size: 1.8rem; }
-    .hero p { font-size: 1rem; }
-    .packages-grid { display: flex; flex-direction: column; gap: 20px; }
-    .package-item { width: 100%; }
-}
-</style>
 </head>
 <body>
 
 <header class="header">
     <div class="container">
         <div class="logo"><h1>Focus.By.Kiersten</h1></div>
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <nav class="nav">
-            <ul id="navMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#packages">Packages</a></li>
-                <li><a href="#social">Social</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </div>
 </header>
 
@@ -228,24 +184,6 @@ body, html { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter'
 </form>
 </div>
 </section>
-
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-content">
-<div class="footer-brand">
-<h3>Focus.By.Kiersten</h3>
-<p>Capturing life's precious moments with artistic vision</p>
-</div>
-<div class="footer-social">
-<h4>Follow Me</h4>
-<div class="footer-social-links">
-<a href="#" class="footer-social-link">📸 Instagram</a>
-<a href="#" class="footer-social-link">📘 Facebook</a>
-<a href="#" class="footer-social-link">🐦 Twitter</a>
-<a href="#" class="footer-social-link">📱 TikTok</a>
-</div>
-</div>
 
     <!-- Footer -->
     <footer class="footer">
