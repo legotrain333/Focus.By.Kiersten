@@ -46,3 +46,24 @@ document.addEventListener('DOMContentLoaded', function() {
     setupOptionButtons("paymentType", "payment_type_input");
     setupOptionButtons("paymentMethod", "payment_method_input");
 });
+document.addEventListener('DOMContentLoaded', function() {
+    function setupOptionButtons(groupId, inputId) {
+        const group = document.getElementById(groupId);
+        const input = document.getElementById(inputId);
+        const buttons = group.querySelectorAll(".option-btn");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                buttons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+                input.value = button.dataset.value;
+            });
+        });
+    }
+
+    setupOptionButtons("sessionLength", "session_length_input");
+    setupOptionButtons("editingPackage", "editing_package_input");
+    setupOptionButtons("distribution", "distribution_input");
+    setupOptionButtons("paymentType", "payment_type_input");
+    setupOptionButtons("paymentMethod", "payment_method_input");
+});
