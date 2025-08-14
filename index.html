@@ -135,65 +135,58 @@
 
     <!-- Booking Form -->
 <section id="contact" class="contact">
-    <div class="container">
-        <h2>Book Your Session</h2>
-         <!-- add own stuff here -->
-        <form class="contact-form" action="https://formsubmit.co/15f2077d436e9195d0751cf5a7e8c00c" method="POST">
-            <input type="text" name="first_name" placeholder="First Name" required>
-            <input type="text" name="last_name" placeholder="Last Name" required>
-            <input type="email" name="email" placeholder="Email" required>
+    <form class="contact-form" action="https://formsubmit.co/15f2077d436e9195d0751cf5a7e8c00c" method="POST">
+    <input type="text" name="first_name" placeholder="First Name" required>
+    <input type="text" name="last_name" placeholder="Last Name" required>
+    <input type="email" name="email" placeholder="Email" required>
 
-            <label>Session Length</label>
-            <div class="button-group" id="sessionLength">
-                <button type="button" data-value="30 min - $60" class="option-btn">30 min - $60</button>
-                <button type="button" data-value="1 hr - $120" class="option-btn">1 hr - $120 (Recommended)</button>
-                <button type="button" data-value="1.5 hr - $155" class="option-btn">1.5 hr - $155</button>
-                <button type="button" data-value="2 hr - $190" class="option-btn">2 hr - $190</button>
-            </div>
-            <input type="hidden" name="session_length" id="session_length_input" required>
-
-            <label>Editing Package</label>
-            <div class="button-group" id="editingPackage">
-                <button type="button" data-value="Basic - $5" class="option-btn">Basic Color Grade - $5</button>
-                <button type="button" data-value="Regular - $10" class="option-btn">Basic Color Grade and Regular Color/Cropped - $10</button>
-                <button type="button" data-value="Added Effects - $25" class="option-btn">Basic Color Grade + Regular + Added Effects Photoshop Per Request - $25</button>
-            </div>
-            <input type="hidden" name="editing_package" id="editing_package_input" required>
-
-            <label>Distribution</label>
-            <div class="button-group" id="distribution">
-                <button type="button" class="option-btn" data-value="FREE, Digital access">FREE, Digital access</button>
-                <button type="button" class="option-btn" data-value="$5 - 5 printed(4X6)/ Digital access">$5 - 5 printed(4X6)/ Digital access</button>
-                <button type="button" class="option-btn" data-value="$10 - 5 printed(5X7)/ Digital access">$10 - 5 printed(5X7)/ Digital access</button>
-                <button type="button" class="option-btn" data-value="$15 - 5 printed(8X10)/ Digital access">$15 - 5 printed(8X10)/ Digital access</button>
-                <button type="button" class="option-btn" data-value="$20 - 10 prints up to 8X10 / Digital access">$20 - 10 prints up to 8X10 / Digital access</button>
-                <button type="button" class="option-btn" data-value="$30 - Poster with 5 favorite photos / Digital access">$30 - Poster with 5 favorite photos / Digital access</button>
-            </div>
-            <input type="hidden" name="distribution" id="distribution_input" required>
-
-            <label>Payment Options</label>
-            <div class="button-group" id="paymentType">
-                <button type="button" data-value="Full Payment Upfront - 10% Off" class="option-btn">Full Payment Upfront - 10% Off</button>
-                <button type="button" data-value="Half Payment" class="option-btn">Half Payment</button>
-            </div>
-            <input type="hidden" name="payment_type" id="payment_type_input" required>
-
-            <label>Payment Method</label>
-            <div class="button-group" id="paymentMethod">
-                <button type="button" data-value="Cash" class="option-btn">Cash</button>
-                <button type="button" data-value="Online" class="option-btn">Online</button>
-            </div>
-            <input type="hidden" name="payment_method" id="payment_method_input" required>
-
-            <label>Choose a Date / Time</label>
-            <input type="datetime-local" name="session_date" required>
-
-            <label>Extras / Notes / Preferences</label>
-            <textarea name="extras" placeholder="Any notes, preferences, or questions before the session..." rows="4"></textarea>
-           
-            <button type="submit" class="cta-button">Submit Booking</button>
-        </form>
+    <label>Session Length</label>
+    <div class="button-group" id="sessionLength">
+        <button type="button" data-value="30 min - $60" class="option-btn">30 min - $60</button>
+        <button type="button" data-value="1 hr - $120" class="option-btn active">1 hr - $120 (Recommended)</button>
+        <button type="button" data-value="1.5 hr - $155" class="option-btn">1.5 hr - $155</button>
+        <button type="button" data-value="2 hr - $190" class="option-btn">2 hr - $190</button>
     </div>
+    <input type="hidden" name="session_length" id="session_length_input" value="1 hr - $120" required>
+
+    <label>Editing Package</label>
+    <div class="button-group" id="editingPackage">
+        <button type="button" data-value="Basic - $5" class="option-btn active">Basic Color Grade - $5</button>
+        <button type="button" data-value="Regular - $10" class="option-btn">Basic Color Grade and Regular Color/Cropped - $10</button>
+        <button type="button" data-value="Added Effects - $25" class="option-btn">Basic Color Grade + Regular + Added Effects - $25</button>
+    </div>
+    <input type="hidden" name="editing_package" id="editing_package_input" value="Basic - $5" required>
+
+    <label>Distribution</label>
+    <div class="button-group" id="distribution">
+        <button type="button" class="option-btn active" data-value="FREE, Digital access">FREE, Digital access</button>
+        <button type="button" class="option-btn" data-value="$5 - 5 printed(4X6)/ Digital access">$5 - 5 printed(4X6)/ Digital access</button>
+        <button type="button" class="option-btn" data-value="$10 - 5 printed(5X7)/ Digital access">$10 - 5 printed(5X7)/ Digital access</button>
+    </div>
+    <input type="hidden" name="distribution" id="distribution_input" value="FREE, Digital access" required>
+
+    <label>Payment Options</label>
+    <div class="button-group" id="paymentType">
+        <button type="button" data-value="Full Payment Upfront - 10% Off" class="option-btn active">Full Payment Upfront - 10% Off</button>
+        <button type="button" data-value="Half Payment" class="option-btn">Half Payment</button>
+    </div>
+    <input type="hidden" name="payment_type" id="payment_type_input" value="Full Payment Upfront - 10% Off" required>
+
+    <label>Payment Method</label>
+    <div class="button-group" id="paymentMethod">
+        <button type="button" data-value="Cash" class="option-btn active">Cash</button>
+        <button type="button" data-value="Online" class="option-btn">Online</button>
+    </div>
+    <input type="hidden" name="payment_method" id="payment_method_input" value="Cash" required>
+
+    <label>Choose a Date / Time</label>
+    <input type="datetime-local" name="session_date" required>
+
+    <label>Extras / Notes / Preferences</label>
+    <textarea name="extras" placeholder="Any notes, preferences, or questions before the session..." rows="4"></textarea>
+
+    <button type="submit" class="cta-button">Submit Booking</button>
+</form>
 </section>
 
 
