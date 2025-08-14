@@ -1,195 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Focus.By.Kiersten - Photography</title>
-    <link rel="icon" href="favetest.webp" type="image/webp">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Focus.By.Kiersten - Photography</title>
+<link rel="icon" href="favetest.webp" type="image/webp">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* Reset and basic */
+body, html { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+.header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff; transition: background-color 0.3s, backdrop-filter 0.3s; padding: 10px 0; }
+.container { width: 90%; max-width: 1200px; margin: auto; }
+.nav ul { display: flex; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
+.nav li { margin-right: 20px; }
+.nav a { text-decoration: none; color: #000; }
+.hero { padding-top: 120px; }
+.hero h2 { font-size: 2rem; margin-bottom: 10px; }
+.hero p { font-size: 1rem; }
+.button-group { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+.option-btn { padding: 8px 12px; border: 1px solid #000; cursor: pointer; background: #fff; border-radius: 5px; }
+.option-btn.active { background-color: #000; color: #fff; }
+
+/* Hamburger styles */
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.hamburger div { width: 25px; height: 3px; background-color: #000; transition: 0.3s; }
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .nav ul { display: none; flex-direction: column; gap: 10px; background-color: #fff; position: absolute; top: 100%; left: 0; width: 100%; padding: 10px 0; }
+    .nav ul.active { display: flex; }
+    .hamburger { display: flex; }
+    .hero h2 { font-size: 1.8rem; }
+    .hero p { font-size: 1rem; }
+    .packages-grid { display: flex; flex-direction: column; gap: 20px; }
+    .package-item { width: 100%; }
+}
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo"><h1>Focus.By.Kiersten</h1></div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#packages">Packages</a></li>
-                    <li><a href="#social">Social</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+
+<header class="header">
+    <div class="container">
+        <div class="logo"><h1>Focus.By.Kiersten</h1></div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-    </header>
+        <nav class="nav">
+            <ul id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#social">Social</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h2>Forever Framed in Focus</h2>
-                    <p>I'm a 17-year-old photographer and filmmaker with a passion for capturing authentic moments. My journey started with a love for film, which led to an opportunity to work for my county as a photographer. That experience deepened my skills and sparked the idea to start my own photography business. Whether in a studio or outdoors, I focus on making clients feel comfortable so I can capture their true personality with exceptional image quality and lighting.</p>
-                    <a href="#packages" class="learn-more-button">Learn More</a>
-                </div>
-                <div class="hero-image">
-                    <div class="image-placeholder">
-                        <div class="placeholder-content">
-                            <span class="placeholder-icon">📸</span>
-                            <p>Kiersten's Photo</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Hero Section -->
+<section id="home" class="hero">
+<div class="container">
+<div class="hero-content">
+<div class="hero-text">
+<h2>Forever Framed in Focus</h2>
+<p>I'm a 17-year-old photographer and filmmaker with a passion for capturing authentic moments. My journey started with a love for film, which led to an opportunity to work for my county as a photographer. That experience deepened my skills and sparked the idea to start my own photography business. Whether in a studio or outdoors, I focus on making clients feel comfortable so I can capture their true personality with exceptional image quality and lighting.</p>
+<a href="#packages" class="learn-more-button">Learn More</a>
+</div>
+<div class="hero-image">
+<div class="image-placeholder">
+<div class="placeholder-content">
+<span class="placeholder-icon">📸</span>
+<p>Kiersten's Photo</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-    <!-- Packages Section -->
-    <section id="packages" class="packages">
-        <div class="container">
-            <h2>Session Packages</h2>
-            <div class="packages-grid">
-                <!-- Portrait Session -->
-                <div class="package-item">
-                    <div class="package-image">
-                        <div class="image-placeholder">
-                            <div class="placeholder-content">
-                                <span class="placeholder-icon">👤</span>
-                                <p>Portrait Photo</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="package-header">
-                        <h3>Portrait Session</h3>
-                        <div class="price">$150</div>
-                    </div>
-                    <div class="package-content">
-                        <ul>
-                            <li>1-hour photo session</li>
-                            <li>Professional editing</li>
-                            <li>20+ high-resolution images</li>
-                            <li>Online gallery</li>
-                            <li>Print release</li>
-                        </ul>
-                        <a href="#contact" class="package-button">Book Now</a>
-                    </div>
-                </div>
-                <!-- Family Session -->
-                <div class="package-item">
-                    <div class="package-image">
-                        <div class="image-placeholder">
-                            <div class="placeholder-content">
-                                <span class="placeholder-icon">👨‍👩‍👧‍👦</span>
-                                <p>Family Photo</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="package-header">
-                        <h3>Family Session</h3>
-                        <div class="price">$250</div>
-                    </div>
-                    <div class="package-content">
-                        <ul>
-                            <li>1.5-hour photo session</li>
-                            <li>Professional editing</li>
-                            <li>30+ high-resolution images</li>
-                            <li>Online gallery</li>
-                            <li>Print release</li>
-                            <li>Location scouting</li>
-                        </ul>
-                        <a href="#contact" class="package-button">Book Now</a>
-                    </div>
-                </div>
-                <!-- Event Coverage -->
-                <div class="package-item">
-                    <div class="package-image">
-                        <div class="image-placeholder">
-                            <div class="placeholder-content">
-                                <span class="placeholder-icon">🎉</span>
-                                <p>Event Photo</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="package-header">
-                        <h3>Event Coverage</h3>
-                        <div class="price">$400</div>
-                    </div>
-                    <div class="package-content">
-                        <ul>
-                            <li>3-hour event coverage</li>
-                            <li>Professional editing</li>
-                            <li>50+ high-resolution images</li>
-                            <li>Online gallery</li>
-                            <li>Print release</li>
-                            <li>Quick turnaround</li>
-                        </ul>
-                        <a href="#contact" class="package-button">Book Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Packages Section -->
+<section id="packages" class="packages">
+<div class="container">
+<h2>Session Packages</h2>
+<div class="packages-grid">
+<!-- Portrait Session -->
+<div class="package-item">
+<div class="package-image">
+<div class="image-placeholder">
+<div class="placeholder-content">
+<span class="placeholder-icon">👤</span>
+<p>Portrait Photo</p>
+</div>
+</div>
+</div>
+<div class="package-header">
+<h3>Portrait Session</h3>
+<div class="price">$150</div>
+</div>
+<div class="package-content">
+<ul>
+<li>1-hour photo session</li>
+<li>Professional editing</li>
+<li>20+ high-resolution images</li>
+<li>Online gallery</li>
+<li>Print release</li>
+</ul>
+<a href="#contact" class="package-button">Book Now</a>
+</div>
+</div>
+<!-- Family Session -->
+<div class="package-item">
+<div class="package-image">
+<div class="image-placeholder">
+<div class="placeholder-content">
+<span class="placeholder-icon">👨‍👩‍👧‍👦</span>
+<p>Family Photo</p>
+</div>
+</div>
+</div>
+<div class="package-header">
+<h3>Family Session</h3>
+<div class="price">$250</div>
+</div>
+<div class="package-content">
+<ul>
+<li>1.5-hour photo session</li>
+<li>Professional editing</li>
+<li>30+ high-resolution images</li>
+<li>Online gallery</li>
+<li>Print release</li>
+<li>Location scouting</li>
+</ul>
+<a href="#contact" class="package-button">Book Now</a>
+</div>
+</div>
+<!-- Event Coverage -->
+<div class="package-item">
+<div class="package-image">
+<div class="image-placeholder">
+<div class="placeholder-content">
+<span class="placeholder-icon">🎉</span>
+<p>Event Photo</p>
+</div>
+</div>
+</div>
+<div class="package-header">
+<h3>Event Coverage</h3>
+<div class="price">$400</div>
+</div>
+<div class="package-content">
+<ul>
+<li>3-hour event coverage</li>
+<li>Professional editing</li>
+<li>50+ high-resolution images</li>
+<li>Online gallery</li>
+<li>Print release</li>
+<li>Quick turnaround</li>
+</ul>
+<a href="#contact" class="package-button">Book Now</a>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-    <!-- Booking Form -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Book Your Session</h2>
-            <form class="contact-form" action="https://formsubmit.co/15f2077d436e9195d0751cf5a7e8c00c" method="POST">
-                <input type="text" name="first_name" placeholder="First Name" required>
-                <input type="text" name="last_name" placeholder="Last Name" required>
-                <input type="email" name="email" placeholder="Email" required>
+<!-- Booking Form Section -->
+<section id="contact" class="contact">
+<div class="container">
+<h2>Book Your Session</h2>
+<form class="contact-form" action="https://formsubmit.co/15f2077d436e9195d0751cf5a7e8c00c" method="POST">
+<input type="text" name="first_name" placeholder="First Name" required>
+<input type="text" name="last_name" placeholder="Last Name" required>
+<input type="email" name="email" placeholder="Email" required>
 
-                <label>Session Length</label>
-                <div class="button-group" id="sessionLength">
-                    <button type="button" data-value="30 min - $60" class="option-btn">30 min - $60</button>
-                    <button type="button" data-value="1 hr - $120" class="option-btn active">1 hr - $120 (Recommended)</button>
-                </div>
-                <input type="hidden" name="session_length" id="session_length_input" value="1 hr - $120" required>
+<label>Session Length</label>
+<div class="button-group" id="sessionLength">
+    <button type="button" data-value="30 min - $60" class="option-btn">30 min - $60</button>
+    <button type="button" data-value="1 hr - $120" class="option-btn">1 hr - $120 (Recommended)</button>
+    <button type="button" data-value="1.5 hr - $155" class="option-btn">1.5 hr - $155</button>
+    <button type="button" data-value="2 hr - $190" class="option-btn">2 hr - $190</button>
+</div>
+<input type="hidden" name="session_length" id="session_length_input" required>
 
-                <label>Editing Package</label>
-                <div class="button-group" id="editingPackage">
-                    <button type="button" data-value="Basic - $5" class="option-btn active">Basic Color Grade - $5</button>
-                    <button type="button" data-value="Regular - $10" class="option-btn">Regular - $10</button>
-                </div>
-                <input type="hidden" name="editing_package" id="editing_package_input" value="Basic - $5" required>
+<label>Editing Package</label>
+<div class="button-group" id="editingPackage">
+    <button type="button" data-value="Basic - $5" class="option-btn">Basic Color Grade - $5</button>
+    <button type="button" data-value="Regular - $10" class="option-btn">Basic Color Grade and Regular Color/Cropped - $10</button>
+    <button type="button" data-value="Added Effects - $25" class="option-btn">Basic Color Grade + Regular + Added Effects Photoshop Per Request - $25</button>
+</div>
+<input type="hidden" name="editing_package" id="editing_package_input" required>
 
-                <label>Distribution</label>
-                <div class="button-group" id="distribution">
-                    <button type="button" class="option-btn active" data-value="FREE, Digital access">FREE, Digital access</button>
-                    <button type="button" class="option-btn" data-value="$5 - 5 printed(4X6)/ Digital access">$5 - 5 printed(4X6)/ Digital access</button>
-                </div>
-                <input type="hidden" name="distribution" id="distribution_input" value="FREE, Digital access" required>
+<label>Distribution</label>
+<div class="button-group" id="distribution">
+    <button type="button" class="option-btn" data-value="FREE, Digital access">FREE, Digital access</button>
+    <button type="button" class="option-btn" data-value="$5 - 5 printed(4X6)/ Digital access">$5 - 5 printed(4X6)/ Digital access</button>
+    <button type="button" class="option-btn" data-value="$10 - 5 printed(5X7)/ Digital access">$10 - 5 printed(5X7)/ Digital access</button>
+    <button type="button" class="option-btn" data-value="$15 - 5 printed(8X10)/ Digital access">$15 - 5 printed(8X10)/ Digital access</button>
+    <button type="button" class="option-btn" data-value="$20 - 10 prints up to 8X10 / Digital access">$20 - 10 prints up to 8X10 / Digital access</button>
+    <button type="button" class="option-btn" data-value="$30 - Poster with 5 favorite photos / Digital access">$30 - Poster with 5 favorite photos / Digital access</button>
+</div>
+<input type="hidden" name="distribution" id="distribution_input" required>
 
-                <label>Payment Options</label>
-                <div class="button-group" id="paymentType">
-                    <button type="button" data-value="Full Payment Upfront - 10% Off" class="option-btn active">Full Payment Upfront - 10% Off</button>
-                    <button type="button" data-value="Half Payment" class="option-btn">Half Payment</button>
-                </div>
-                <input type="hidden" name="payment_type" id="payment_type_input" value="Full Payment Upfront - 10% Off" required>
+<label>Payment Options</label>
+<div class="button-group" id="paymentType">
+    <button type="button" data-value="Full Payment Upfront - 10% Off" class="option-btn">Full Payment Upfront - 10% Off</button>
+    <button type="button" data-value="Half Payment" class="option-btn">Half Payment</button>
+</div>
+<input type="hidden" name="payment_type" id="payment_type_input" required>
 
-                <label>Payment Method</label>
-                <div class="button-group" id="paymentMethod">
-                    <button type="button" data-value="Cash" class="option-btn active">Cash</button>
-                    <button type="button" data-value="Online" class="option-btn">Online</button>
-                </div>
-                <input type="hidden" name="payment_method" id="payment_method_input" value="Cash" required>
+<label>Payment Method</label>
+<div class="button-group" id="paymentMethod">
+    <button type="button" data-value="Cash" class="option-btn">Cash</button>
+    <button type="button" data-value="Online" class="option-btn">Online</button>
+</div>
+<input type="hidden" name="payment_method" id="payment_method_input" required>
 
-                <label>Choose a Date / Time</label>
-                <input type="datetime-local" name="session_date" required>
+<label>Choose a Date / Time</label>
+<input type="datetime-local" name="session_date" required>
 
-                <label>Extras / Notes / Preferences</label>
-                <textarea name="extras" placeholder="Any notes, preferences, or questions..." rows="4"></textarea>
+<label>Extras / Notes / Preferences</label>
+<textarea name="extras" placeholder="Any notes, preferences, or questions before the session..." rows="4"></textarea>
 
-                <!-- FormSubmit required hidden fields -->
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+<button type="submit" class="cta-button">Submit Booking</button>
+</form>
+</div>
+</section>
 
-                <button type="submit" class="cta-button">Submit Booking</button>
-            </form>
-        </div>
-    </section>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-brand">
+<h3>Focus.By.Kiersten</h3>
+<p>Capturing life's precious moments with artistic vision</p>
+</div>
+<div class="footer-social">
+<h4>Follow Me</h4>
+<div class="footer-social-links">
+<a href="#" class="footer-social-link">📸 Instagram</a>
+<a href="#" class="footer-social-link">📘 Facebook</a>
+<a href="#" class="footer-social-link">🐦 Twitter</a>
+<a href="#" class="footer-social-link">📱 TikTok</a>
+</div>
+</div>
 
     <!-- Footer -->
     <footer class="footer">
