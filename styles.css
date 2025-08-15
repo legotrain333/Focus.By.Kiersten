@@ -40,7 +40,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: 700;
-    color: #8b5cf6;
+    color: #8f99fb;
     letter-spacing: -0.5px;
 }
 
@@ -52,19 +52,19 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: #8b5cf6;
+    color: #8f99fb;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav a:hover {
-    color: #8b5cf6;
+    color: #8f99fb;
 }
 
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #8f99fb 0%, #8f99fb 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -96,7 +96,7 @@ body {
 .cta-button {
     display: inline-block;
     background-color: white;
-    color: #8b5cf6;
+    color: #8f99fb;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 50px;
@@ -108,9 +108,9 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #7c3aed;
+    background-color: #8f99fb;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 5px 15px rgba(143, 153, 251, 0.3);
 }
 
 .learn-more-button {
@@ -129,7 +129,7 @@ body {
 
 .learn-more-button:hover {
     background-color: white;
-    color: #8b5cf6;
+    color: #8f99fb;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
@@ -157,16 +157,18 @@ body {
 }
 
 .placeholder-icon {
-    font-size: 4rem;
-    display: block;
-    margin-bottom: 1rem;
+    display: block;      /* ensures it acts like a block */
+    margin-bottom: 0.3rem; /* space between image and text */
 }
-
+.placeholder-icon img {
+    display: block;
+    margin: 0 auto 10px auto; /* 10px space below the image */
+}
 .placeholder-content p {
     font-size: 1.1rem;
     font-weight: 500;
+    margin-top: 1.75rem; /* moves it closer to the image */
 }
-
 /* About Section */
 .about {
     padding: 80px 0;
@@ -178,7 +180,7 @@ body {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: #8b5cf6;
+    color: #8f99fb;
 }
 
 .about-text {
@@ -277,7 +279,7 @@ body {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #e74c3c;
+    border-color: #8f99fb;
 }
 
 .contact-form textarea {
@@ -302,7 +304,7 @@ body {
 .footer-brand h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
-    color: #8b5cf6;
+    color: #8f99fb;
     margin-bottom: 1rem;
 }
 
@@ -315,7 +317,7 @@ body {
 .footer-contact h4 {
     font-family: 'Playfair Display', serif;
     font-size: 1.3rem;
-    color: #8b5cf6;
+    color: #8f99fb;
     margin-bottom: 1rem;
 }
 
@@ -333,7 +335,7 @@ body {
 }
 
 .footer-social-link:hover {
-    color: #8b5cf6;
+    color: #8f99fb;
 }
 
 .footer-contact p {
@@ -464,7 +466,7 @@ html {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: #8b5cf6;
+    color: #8f99fb;
 }
 
 .packages-grid {
@@ -509,7 +511,7 @@ html {
 
 .package-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+    box-shadow: 0 20px 40px rgba(143, 153, 251, 0.2);
 }
 
 
@@ -524,14 +526,14 @@ html {
 .package-header h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
-    color: #8b5cf6;
+    color: #8f99fb;
     margin-bottom: 0.5rem;
 }
 
 .price {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #8b5cf6;
+    color: #8f99fb;
 }
 
 .package-content {
@@ -554,13 +556,13 @@ html {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #8b5cf6;
+    color: #8f99fb;
     font-weight: bold;
 }
 
 .package-button {
     display: block;
-    background-color: #8b5cf6;
+    background-color: #8f99fb;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -568,14 +570,14 @@ html {
     font-weight: 500;
     text-align: center;
     transition: all 0.3s ease;
-    border: 2px solid #8b5cf6;
+    border: 2px solid #8f99fb;
 }
 
 .package-button:hover {
     background-color: transparent;
-    color: #8b5cf6;
+    color: #8f99fb;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 5px 15px rgba(143, 153, 251, 0.3);
 }
 
 /* Social Media Section */
@@ -589,7 +591,7 @@ html {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 1rem;
-    color: #8b5cf6;
+    color: #8f99fb;
 }
 
 .social-subtitle {
@@ -624,8 +626,8 @@ html {
 
 .social-item:hover {
     transform: translateY(-5px);
-    border-color: #8b5cf6;
-    box-shadow: 0 15px 30px rgba(139, 92, 246, 0.2);
+    border-color: #8f99fb;
+    box-shadow: 0 15px 30px rgba(143, 153, 251, 0.2);
 }
 
 .social-icon {
@@ -637,7 +639,7 @@ html {
 .social-item h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
-    color: #8b5cf6;
+    color: #8f99fb;
     margin-bottom: 0.5rem;
 }
 
@@ -649,7 +651,7 @@ html {
 /* Booking Form Styles */
 .contact-form h3 {
     font-family: 'Playfair Display', serif;
-    color: #8b5cf6;
+    color: #8f99fb;
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
@@ -669,9 +671,9 @@ html {
 }
 
 .contact-form .button-group button {
-    background-color: #8b5cf6;
+    background-color: #8f99fb;
     color: white;
-    border: 2px solid #8b5cf6;
+    border: 2px solid #8f99fb;
     border-radius: 50px;
     padding: 10px 20px;
     cursor: pointer;
@@ -682,8 +684,8 @@ html {
 .contact-form .button-group button:hover,
 .contact-form .button-group button.active {
     background-color: white;
-    color: #8b5cf6;
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+    color: #8f99fb;
+    box-shadow: 0 5px 15px rgba(143, 153, 251, 0.3);
     transform: translateY(-2px);
 }
 
@@ -697,7 +699,7 @@ html {
 
 .contact-form input[type="datetime-local"]:focus {
     outline: none;
-    border-color: #8b5cf6;
+    border-color: #8f99fb;
 }
 
 .contact-form textarea {
@@ -712,14 +714,14 @@ html {
 }
 
 .contact-form textarea:focus {
-    border-color: #8b5cf6;
+    border-color: #8f99fb;
 }
 
 .contact-form .cta-button {
     margin-top: 1rem;
-    background-color: #8b5cf6;
+    background-color: #8f99fb;
     color: white;
-    border: 2px solid #8b5cf6;
+    border: 2px solid #8f99fb;
     padding: 15px 30px;
     border-radius: 50px;
     font-size: 1rem;
@@ -729,9 +731,9 @@ html {
 
 .contact-form .cta-button:hover {
     background-color: white;
-    color: #8b5cf6;
+    color: #8f99fb;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 5px 15px rgba(143, 153, 251, 0.3);
 }
 
 /* Responsive Form Adjustments */
@@ -763,7 +765,7 @@ html {
     display: inline-block;
     padding: 10px 20px;
     border-radius: 50px;
-    background-color: #8b5cf6;
+    background-color: #8f99fb;
     color: white;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -771,16 +773,16 @@ html {
 
 .option-button input:checked + span {
     background-color: white;
-    color: #8b5cf6;
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+    color: #8f99fb;
+    box-shadow: 0 5px 15px rgba(143, 153, 251, 0.3);
     transform: translateY(-2px);
 }
 
 .option-button span:hover {
     background-color: white;
-    color: #8b5cf6;
+    color: #8f99fb;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 5px 15px rgba(143, 153, 251, 0.3);
 }
 .contact-form {
     background: #fff;
@@ -793,7 +795,7 @@ html {
 
 .contact-form h3 {
     font-family: 'Playfair Display', serif;
-    color: #8b5cf6;
+    color: #8f99fb;
     font-size: 1.8rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -814,8 +816,8 @@ html {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #8b5cf6;
-    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+    border-color: #8f99fb;
+    box-shadow: 0 0 10px rgba(143, 153, 251, 0.2);
 }
 
 .contact-form label {
@@ -837,7 +839,7 @@ html {
     display: inline-block;
     padding: 12px 25px;
     border-radius: 50px;
-    background-color: #8b5cf6;
+    background-color: #8f99fb;
     color: white;
     font-weight: 500;
     font-size: 0.95rem;
@@ -847,17 +849,17 @@ html {
 
 .option-button input:checked + span {
     background-color: white;
-    color: #8b5cf6;
-    border: 2px solid #8b5cf6;
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+    color: #8f99fb;
+    border: 2px solid #8f99fb;
+    box-shadow: 0 5px 15px rgba(143, 153, 251, 0.3);
     transform: translateY(-2px);
 }
 
 .option-button span:hover {
     background-color: white;
-    color: #8b5cf6;
+    color: #8f99fb;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.2);
+    box-shadow: 0 5px 15px rgba(143, 153, 251, 0.2);
 }
 
 .cta-button {
@@ -866,7 +868,7 @@ html {
     text-align: center;
     padding: 15px 0;
     margin-top: 1.5rem;
-    background-color: #8b5cf6;
+    background-color: #8f99fb;
     color: white;
     font-size: 1rem;
     font-weight: 500;
@@ -879,8 +881,8 @@ html {
 
 .cta-button:hover {
     background-color: white;
-    color: #8b5cf6;
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+    color: #8f99fb;
+    box-shadow: 0 5px 15px rgba(143, 153, 251, 0.3);
     transform: translateY(-2px);
 }
 
@@ -902,9 +904,9 @@ html {
 }
 
 .option-btn {
-    background-color: #8b5cf6;
+    background-color: #8f99fb;
     color: white;
-    border: 2px solid #8b5cf6;
+    border: 2px solid #8f99fb;
     border-radius: 50px;
     padding: 12px 25px;
     font-weight: 500;
@@ -914,16 +916,17 @@ html {
 
 .option-btn:hover {
     background-color: white;
-    color: #8b5cf6;
+    color: #8f99fb;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 5px 15px rgba(143, 153, 251, 0.3);
 }
 
 .option-btn.active {
-    background-color: #7c3aed;
+    background-color: #8f99fb;
     color: white;
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 5px 15px rgba(143, 153, 251, 0.3);
 }
+
 /* Remove Hamburger Button */
 .hamburger {
     display: none !important; /* hide the button */
@@ -942,4 +945,259 @@ html {
         flex-direction: row !important;
         gap: 1rem !important;
     }
+}
+.info-policies {
+    background: #faf9f6;
+    padding: 80px 0;
+    margin: 0;
+}
+
+.info-policies .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-policies h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+    color: #8f99fb;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.info-policies p {
+    color: #6c757d;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.info-policies ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-policies > .container > ul > li {
+    margin-bottom: 2rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(139, 92, 246, 0.07);
+    padding: 1.5rem 1.5rem 1rem 2.5rem;
+    position: relative;
+    border-left: 5px solid #8f99fb;
+}
+
+.info-policies > .container > ul > li strong {
+    color: #8f99fb;
+    font-size: 1.15rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.info-policies ul ul {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+}
+
+.info-policies ul ul li {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.info-policies ul ul li:before {
+    content: "•";
+    color: #8f99fb;
+    position: absolute;
+    left: 0;
+    font-size: 1.1rem;
+    top: 0.1rem;
+}
+
+@media (max-width: 768px) {
+    .info-policies {
+        padding: 50px 0;
+    }
+    .info-policies .container {
+        padding: 0 10px;
+    }
+    .info-policies h2 {
+        font-size: 1.5rem;
+    }
+    .info-policies > .container > ul > li {
+        padding: 1rem 1rem 0.7rem 1.2rem;
+    }
+}
+
+
+/* Policy Split Section - Make Editing/Distribution look like Session Packages */
+.policy-split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 3rem auto 0 auto;
+}
+
+.policy-box {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.08);
+    padding: 2.5rem 2rem 2rem 2rem;
+    border: 2px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.policy-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.13);
+    border-color: #8f99fb;
+}
+
+.policy-box h3 {
+    font-family: 'Playfair Display', serif;
+    color: #8f99fb;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.policy-box ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.2rem;
+    width: 100%;
+}
+
+.policy-box li {
+    color: #6c757d;
+    font-size: 1.08rem;
+    margin-bottom: 0.7rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.policy-box li:before {
+    content: "✓";
+    color: #8f99fb;
+    position: absolute;
+    left: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    top: 0.1rem;
+}
+
+.policy-box p {
+    font-size: 0.98rem;
+    color: #8f99fb;
+    margin-top: 0.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .policy-split {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .policy-box {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+.policy-agree-label {
+    display: flex;
+    align-items: baseline; /* aligns checkbox with first line of text */
+    gap: 0.5rem;
+    font-size: 1rem;
+    margin: 1.2rem 0 1.5rem 0;
+    color: #6c757d;
+    cursor: pointer;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.policy-agree-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #8f99fb;
+    margin: 0;
+    flex-shrink: 0;
+    vertical-align: text-bottom; /* helps fine-tune vertical position */
+}
+
+.policy-agree-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0 2rem 0;
+    padding-left: 2px;
+}
+
+.policy-agree-row input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #8f99fb;
+    margin: 0;
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(143,153,251,0.08);
+}
+
+.policy-agree-row label {
+    font-size: 1.08rem;
+    color: #6c757d;
+    cursor: pointer;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 0;
+    user-select: text;
+}
+
+/* Style for read-only payment summary fields */
+.payment-summary {
+    background: #f8f9fa;
+    border: none;
+    color: #8f99fb;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0;
+    margin: 0 0 1.2rem 0;
+    box-shadow: none;
+    outline: none;
+    width: auto;
+    display: inline;
+    pointer-events: none;
+}
+
+#deposit-balance-fields label,
+#discounted-total-field label {
+    margin-bottom: 0.2rem;
+    margin-top: 1rem;
+    color: #2c3e50;
+    font-weight: 500;
+    display: block;
+}
+
+#deposit-balance-fields,
+#discounted-total-field {
+    margin-bottom: 1.2rem;
+}
+
+.policy-note {
+    color: #8f99fb;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 0.7rem;
+    text-align: left;
 }
