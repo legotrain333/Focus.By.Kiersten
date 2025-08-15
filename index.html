@@ -248,7 +248,7 @@ Whether in a studio or outdoors, I focus on making clients feel comfortable so I
         </ul>
       </div>
       <!-- Booking Form Card -->
-      <form class="contact-form booking-card" action="https://formsubmit.co/15f2077d436e9195d0751cf5a7e8c00c" method="POST">
+      <form class="contact-form booking-card" action="https://formsubmit.co/" method="POST">
         <h2>Book Your Session</h2>
         <p>Please fill out the form completely to help me prepare for your session. All information is required unless noted otherwise.</p>
         <h3>Customer Information</h3>
@@ -273,9 +273,18 @@ Whether in a studio or outdoors, I focus on making clients feel comfortable so I
           <button type="button" data-value="2 hr - $190" class="option-btn">2 hours ($190)</button>
         </div>
         <input type="hidden" name="session_length" id="session_length_input" required>
+        
+        <!-- Calendly inline widget begin -->
+        <label>Choose Your Date & Time:</label>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/legotrain810" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+
+        <!-- Remove this old input:
         <label for="session_date">Preferred Date & Time:</label>
         <input type="datetime-local" name="session_date" id="session_date" required>
         <small>Sessions start at scheduled time unless noted 7 days in advance. Outdoor: 7:00 AM–8:30 PM. In-studio: 6:00 AM–9:00 PM</small>
+        -->
         <h3>Editing & Effects</h3>
         <label>Editing Package:</label>
         <div class="button-group" id="editingPackage">
