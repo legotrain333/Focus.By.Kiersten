@@ -1196,8 +1196,306 @@ html {
 
 .policy-note {
     color: #8f99fb;
+    font-size: 0.98rem;
     font-weight: 600;
-    font-size: 1rem;
-    margin-top: 0.7rem;
+    margin-top: 0.5rem;
     text-align: left;
+}
+
+.info-policies-pop {
+    background: #faf9f6;
+    padding: 80px 0;
+    margin: 0;
+}
+
+.policy-pop-box {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(143, 153, 251, 0.08);
+    padding: 2.5rem 2rem 2rem 2rem;
+    border: 2px solid #f1f5f9;
+    max-width: 900px;
+    margin: 0 auto;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.policy-pop-box:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(143, 153, 251, 0.18);
+    border-color: #8f99fb;
+}
+
+.policy-pop-box h2 {
+    font-family: 'Playfair Display', serif;
+    color: #8f99fb;
+    font-size: 2.1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.policy-pop-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.policy-pop-content > ul > li {
+    margin-bottom: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.2rem 1.2rem 0.7rem 1.7rem;
+    border-left: 5px solid #8f99fb;
+    transition: background 0.2s;
+}
+
+.policy-pop-title {
+    color: #8f99fb;
+    font-size: 1.15rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.policy-pop-content ul ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+}
+
+.policy-pop-content ul ul li {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.policy-pop-content ul ul li:before {
+    content: "•";
+    color: #8f99fb;
+    position: absolute;
+    left: 0;
+    font-size: 1.1rem;
+    top: 0.1rem;
+}
+
+@media (max-width: 900px) {
+    .policy-pop-box {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+    .policy-pop-box h2 {
+        font-size: 1.3rem;
+    }
+    .policy-pop-content > ul > li {
+        padding: 1rem 0.7rem 0.5rem 1rem;
+    }
+}
+
+/* Additional Styles for Policy Section */
+.policy-group {
+    margin-bottom: 2.2rem;
+    background: #f8f9fa;
+    border-radius: 14px;
+    padding: 1.2rem 1.2rem 0.7rem 1.7rem;
+    border-left: 5px solid #8f99fb;
+    box-shadow: 0 2px 10px rgba(143, 153, 251, 0.05);
+    transition: 
+        background 0.2s,
+        box-shadow 0.3s,
+        border-color 0.3s,
+        transform 0.3s;
+    position: relative;
+}
+
+.policy-group:hover {
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(143, 153, 251, 0.13);
+    border-color: #8f99fb;
+    transform: translateY(-5px) scale(1.03);
+    z-index: 2;
+}
+
+/* Unified Policies & Form Section */
+.info-policies-form {
+  background: #f8f9fa;
+  padding: 80px 0;
+}
+
+.policies-form-flex {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.policies-card, .booking-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(143, 153, 251, 0.08);
+  padding: 2.5rem 2rem 2rem 2rem;
+  border: 2px solid #f1f5f9;
+  flex: 1 1 400px;
+  min-width: 340px;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.policies-card h2, .booking-card h2 {
+  font-family: 'Playfair Display', serif;
+  color: #8f99fb;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.policies-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.policies-card > ul > li {
+  margin-bottom: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.2rem 1.2rem 0.7rem 1.7rem;
+  border-left: 5px solid #8f99fb;
+}
+
+.policy-title {
+  color: #8f99fb;
+  font-size: 1.15rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.policies-card ul ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.policies-card ul ul li {
+  color: #6c757d;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.policies-card ul ul li:before {
+  content: "•";
+  color: #8f99fb;
+  position: absolute;
+  left: 0;
+  font-size: 1.1rem;
+  top: 0.1rem;
+}
+
+@media (max-width: 1100px) {
+  .policies-form-flex {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+  }
+  .policies-card, .booking-card {
+    max-width: 100%;
+  }
+}
+
+/* --- FORM CARD IMPROVEMENTS --- */
+.booking-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(143, 153, 251, 0.08);
+  padding: 2.5rem 2rem 2rem 2rem;
+  border: 2px solid #f1f5f9;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.booking-card h2 {
+  font-family: 'Playfair Display', serif;
+  color: #8f99fb;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.booking-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #8f99fb;
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.5rem 0;
+  text-align: left;
+  font-weight: 600;
+}
+
+.booking-card label {
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+  margin-top: 0.7rem;
+  display: block;
+}
+
+.booking-card input,
+.booking-card textarea {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 0.7rem;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: #f8f9fa;
+}
+
+.booking-card input:focus,
+.booking-card textarea:focus {
+  outline: none;
+  border-color: #8f99fb;
+  box-shadow: 0 0 8px rgba(143, 153, 251, 0.13);
+}
+
+.booking-card textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.booking-card .button-group {
+  margin-bottom: 1.2rem;
+}
+
+.booking-card .cta-button {
+  margin-top: 1.2rem;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 1.1rem;
+}
+
+.booking-card small {
+  color: #6c757d;
+  font-size: 0.97rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .booking-card {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    max-width: 100%;
+  }
 }
