@@ -1,3 +1,99 @@
+.logo {
+    display: flex;
+    align-items: center; /* Vertically center the image and text */
+    gap: 10px; /* Space between image and text */
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+}
+/* ================================
+   Info Policies Heading Centering
+================================= */
+.info-policies h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  color: #8f99fb;
+  text-align: left;      /* default for small screens */
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  .info-policies h2 {
+    text-align: center;  /* center on wide screens */
+  }
+}
+
+/* ================================
+   Session Packages Grid Responsive
+================================= */
+.packages-grid {
+  display: grid;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: 1fr; /* default = 1x1 for mobile */
+}
+
+@media (min-width: 600px) {
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 for tablets */
+  }
+}
+
+@media (min-width: 1200px) {
+  .packages-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 in a row for desktop */
+  }
+}
+/* Default: left aligned */
+h2 {
+  text-align: left;
+}
+
+/* On wide screens: center */
+@media (min-width: 992px) {
+  h2 {
+    text-align: center;
+  }
+}
+.hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero-text h2 {
+    font-size: 4rem;  /* bigger headline on widescreen */
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+}
+.portfolio-grid,
+.packages-grid,
+.social-grid,
+.policy-split {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.contact-form {
+    margin: 0 auto;
+}
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+@media (min-width: 1400px) {
+    .hero-text h2 {
+        font-size: 4.5rem;
+    }
+    .hero-text p {
+        font-size: 1.4rem;
+        max-width: 700px;
+    }
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -1498,4 +1594,124 @@ html {
     padding: 1.2rem 0.7rem 1rem 0.7rem;
     max-width: 100%;
   }
+}
+#posterPreview {
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center;     /* vertical centering if it has height */
+  margin: 20px 0;          /* optional spacing */
+  text-align: center;      /* centers text inside poster */
+}
+
+
+/* --- Top Instagram CTA (header right) --- */
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-link a {
+  --accent: #8f99fb;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  color: var(--accent);
+  background: #fff;
+  border: 2px solid var(--accent);
+
+  box-shadow: 0 6px 16px rgba(143,153,251,0.12);
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.social-link a::before {
+  content: "📷";
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.social-link a:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(143,153,251,0.28);
+}
+
+.social-link a:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(143,153,251,0.2);
+}
+
+.social-link a:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 6px rgba(143,153,251,0.65);
+  border-color: transparent;
+}
+
+/* Optional: subtle pulsing dot to draw attention */
+.social-link a .pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 2px;
+  background: currentColor;
+  box-shadow: 0 0 0 0 rgba(143,153,251,0.6);
+  animation: instaPulse 1.8s ease-out infinite;
+}
+
+@keyframes instaPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(143,153,251,0.6); }
+  80%  { box-shadow: 0 0 0 10px rgba(143,153,251,0); }
+  100% { box-shadow: 0 0 0 0 rgba(143,153,251,0); }
+}
+
+/* Header layout tweaks so CTA sits nicely on the right */
+.header .container {
+  gap: 1rem;
+}
+
+.logo { flex: 1 1 auto; }
+.social-link { flex: 0 0 auto; }
+
+/* Responsive: full-width CTA on small screens */
+@media (max-width: 768px) {
+  .social-link {
+    width: 100%;
+    justify-content: center;
+  }
+  .social-link a {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+    font-size: 1rem;
+  }
+}
+
+/* Optional: light underline for header link-only version */
+.header .social-link a.is-text {
+  background: transparent;
+  border-color: transparent;
+  color: #8f99fb;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.header .social-link a.is-text:hover {
+  text-decoration: underline;
+  transform: none;
 }
