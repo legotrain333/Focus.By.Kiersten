@@ -488,7 +488,6 @@
             "Recommended Edit - $34.99": 34.99,
             "Build Your Own - $54.99": 54.99
         };
-
         const distributionPrices = {
             "Digital Only": 0,
             "Digital + Poster": 29.99
@@ -506,7 +505,7 @@
                     button.classList.add("active");
                     input.value = button.dataset.value;
                     if (callback) callback(button.dataset.value);
-                    updatePaymentFields(); // Update payment fields on any button click
+                    updatePaymentFields();
                 });
             });
         }
