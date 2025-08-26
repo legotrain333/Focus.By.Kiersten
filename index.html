@@ -461,7 +461,12 @@
     <label for="discounted_total">Discounted Total (10% off) Due Now:</label>
     <input type="text" name="discounted_total" id="discounted_total" class="payment-summary" readonly>
   </div>
-
+<div class="policy-agree-row">
+  <input type="checkbox" name="media_release" id="media_release">
+  <label for="media_release">
+    I give permission for my media to be posted by FOCUS.by.KIERSTEN.
+  </label>
+</div>
 
   <div class="policy-agree-row">
     <input type="checkbox" name="policy_acknowledgment" id="policy_acknowledgment" required>
@@ -496,6 +501,17 @@ document.addEventListener('DOMContentLoaded', function() {
     "Build Your Own - $54.99": 54.99
   };
 
+  // Set default hidden values
+  const hiddenFields = [
+    'session_choice_input', 'session_type_input', 'session_length_input', 'video_session_length_input',
+    'editing_package_input', 'video_editing_package_input', 'distribution_option_input',
+    'poster_option_input', 'payment_type_input', 'payment_method_input'
+  ];
+  hiddenFields.forEach(id => {
+    const field = document.getElementById(id);
+    if(field && !field.value) field.value = 'None';
+  });
+
   function getSelectedSessionPrice() {
     const choice = document.getElementById('session_choice_input').value;
     let total = 0;
@@ -521,12 +537,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if(payInFull==="Yes") {
       depositFields.style.display="none";
       discountedField.style.display="";
-      document.getElementById('discounted_total').value = price ? `$${(price*0.9).toFixed(2)}` : "";
+      document.getElementById('discounted_total').value = `$${(price*0.9).toFixed(2)}`;
     } else if(payInFull==="No") {
       depositFields.style.display="";
       discountedField.style.display="none";
-      document.getElementById('deposit').value = price ? `$${(price*0.25).toFixed(2)}` : "";
-      document.getElementById('balance').value = price ? `$${(price*0.75).toFixed(2)}` : "";
+      document.getElementById('deposit').value = `$${(price*0.25).toFixed(2)}`;
+      document.getElementById('balance').value = `$${(price*0.75).toFixed(2)}`;
     } else {
       depositFields.style.display="none";
       discountedField.style.display="none";
@@ -539,11 +555,13 @@ document.addEventListener('DOMContentLoaded', function() {
   function setupOptionButtons(groupId, inputId, callback) {
     const group = document.getElementById(groupId);
     const input = document.getElementById(inputId);
+    if(!group || !input) return;
+
     group.querySelectorAll("button").forEach(button => {
       button.addEventListener("click", () => {
         group.querySelectorAll("button").forEach(b => b.classList.remove("active"));
         button.classList.add("active");
-        input.value = button.dataset.value;
+        input.value = button.dataset.value || 'None';
         updatePaymentFields();
         if(callback) callback(button.dataset.value);
       });
@@ -582,14 +600,14 @@ document.addEventListener('DOMContentLoaded', function() {
   setupOptionButtons("paymentMethod","payment_method_input");
 
   // Initialize hidden sections
-  document.getElementById('photoSessionLengthSection').style.display = "none";
-  document.getElementById('photoEditingSection').style.display = "none";
-  document.getElementById('distributionOptionsSection').style.display = "none";
-  document.getElementById('posterOptionsContainer').style.display = "none";
-  document.getElementById('videoSessionLengthSection').style.display = "none";
-  document.getElementById('videoEditingSection').style.display = "none";
+  ['photoSessionLengthSection','photoEditingSection','distributionOptionsSection','posterOptionsContainer','videoSessionLengthSection','videoEditingSection']
+    .forEach(id => { document.getElementById(id).style.display = "none"; });
+
+  // Update totals on page load
+  updatePaymentFields();
 });
 </script>
+
 
       
 <footer class="footer">
